@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "title";
+    Layout = "_homeLayout";
+}
+
+<div>
+    <div class="row">
+        <div class="col-md-3">
+            @await Html.PartialAsync("_left_menu")
+        </div>
+        <div class="col-md-9">
+            <div class="card">
+                <img src="~/img/resim1.jpg" class="card-img-top img-fluid"  alt="...">
+                <h5 class="card-header">Featured</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

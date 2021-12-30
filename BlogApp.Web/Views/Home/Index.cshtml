@@ -1,0 +1,37 @@
+﻿@using System.IO
+
+@{
+    Layout = "_homeLayout";
+}
+
+<div class="jumbotron-fluid jumbotron bg-gray">
+    <div class="ml-3 pl-3 text-gray-dark">
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            @await Html.PartialAsync("_left_menu")
+        </div>
+        <div class="col-md-9">
+            @foreach (var file in Directory.GetFiles("wwwroot/img", "*.jpg"))
+            {
+                <div class="card mb-3">
+                    <h3 class="card-header">Featured</h3>
+
+                    <img src="@file.Replace("wwwroot", "")" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
